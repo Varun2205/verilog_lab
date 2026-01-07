@@ -1,0 +1,1 @@
+USING ARTIX7 nexys4ddr
