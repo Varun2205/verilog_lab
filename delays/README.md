@@ -1,0 +1,1 @@
+Design a module that instantiates an AND gate and an OR gate. Specify a rise delay for when the gate output transitions to 1 and a fall delay for when it transitions to 0. Testbench Requirement: Provide a series of input transitions and observe how the turn-off delay (the minimum of the specified delays) affects the high-impedance transitions
