@@ -1,0 +1,182 @@
+$date
+	Wed Mar 11 16:21:37 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_dual_port_ram $end
+$var wire 8 ! dout_b [7:0] $end
+$var wire 8 " dout_a [7:0] $end
+$var reg 10 # addr_a [9:0] $end
+$var reg 10 $ addr_b [9:0] $end
+$var reg 1 % clk $end
+$var reg 8 & din_a [7:0] $end
+$var reg 8 ' din_b [7:0] $end
+$var reg 1 ( rst $end
+$var reg 1 ) rw_a $end
+$var reg 1 * rw_b $end
+$scope module uut $end
+$var wire 10 + addr_a [9:0] $end
+$var wire 10 , addr_b [9:0] $end
+$var wire 1 % clk $end
+$var wire 8 - din_a [7:0] $end
+$var wire 8 . din_b [7:0] $end
+$var wire 1 ( rst $end
+$var wire 1 ) rw_a $end
+$var wire 1 * rw_b $end
+$var reg 8 / dout_a [7:0] $end
+$var reg 8 0 dout_b [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx 0
+bx /
+bx .
+bx -
+bx ,
+bx +
+x*
+x)
+1(
+bx '
+bx &
+0%
+bx $
+bx #
+bx "
+bx !
+$end
+#10000
+b0 !
+b0 0
+b0 "
+b0 /
+1%
+#20000
+0%
+#30000
+1%
+#40000
+0%
+#50000
+bx !
+bx 0
+bx "
+bx /
+1%
+b1001110 $
+b1001110 ,
+b11101 #
+b11101 +
+b100000 '
+b100000 .
+b1101 &
+b1101 -
+1*
+1)
+0(
+#60000
+0%
+#70000
+b100000 !
+b100000 0
+b1101 "
+b1101 /
+1%
+#80000
+0%
+#90000
+1%
+#100000
+0%
+b11101 $
+b11101 ,
+b1100100 #
+b1100100 +
+b110111 &
+b110111 -
+0*
+#110000
+b1101 !
+b1101 0
+1%
+#120000
+0%
+#130000
+1%
+#140000
+0%
+#150000
+bx !
+bx 0
+b100000 "
+b100000 /
+1%
+b1100011 '
+b1100011 .
+b111110100 $
+b111110100 ,
+b1001110 #
+b1001110 +
+1*
+0)
+#160000
+0%
+#170000
+b1100011 !
+b1100011 0
+1%
+#180000
+0%
+#190000
+1%
+#200000
+0%
+b1001110 $
+b1001110 ,
+b11101 #
+b11101 +
+0*
+#210000
+b100000 !
+b100000 0
+b1101 "
+b1101 /
+1%
+#220000
+0%
+#230000
+1%
+#240000
+0%
+#250000
+bx !
+bx 0
+1%
+b100101100 $
+b100101100 ,
+b1001101 &
+b1001101 -
+b100101100 #
+b100101100 +
+1)
+#260000
+0%
+#270000
+b1001101 !
+b1001101 0
+1%
+#280000
+0%
+#290000
+1%
+#300000
+0%
