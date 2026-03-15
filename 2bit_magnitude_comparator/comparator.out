@@ -1,0 +1,81 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib64/ivl/system.vpi";
+:vpi_module "/usr/lib64/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib64/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib64/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib64/ivl/va_math.vpi";
+S_0x55df0edb2280 .scope module, "tb_comparator" "tb_comparator" 2 3;
+ .timescale -9 -12;
+v0x55df0edc7d30_0 .var "a", 1 0;
+v0x55df0edc7e10_0 .var "b", 1 0;
+v0x55df0edc7eb0_0 .net "eq", 0 0, L_0x55df0edc8390;  1 drivers
+v0x55df0edc7f50_0 .net "gt", 0 0, L_0x55df0edc8110;  1 drivers
+v0x55df0edc8020_0 .net "lt", 0 0, L_0x55df0edc82a0;  1 drivers
+S_0x55df0edb2410 .scope module, "uut" "comparator_2bit" 2 8, 3 3 0, S_0x55df0edb2280;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 2 "a";
+    .port_info 1 /INPUT 2 "b";
+    .port_info 2 /OUTPUT 1 "gt";
+    .port_info 3 /OUTPUT 1 "lt";
+    .port_info 4 /OUTPUT 1 "eq";
+v0x55df0eda2280_0 .net "a", 1 0, v0x55df0edc7d30_0;  1 drivers
+v0x55df0edc7940_0 .net "b", 1 0, v0x55df0edc7e10_0;  1 drivers
+v0x55df0edc7a20_0 .net "eq", 0 0, L_0x55df0edc8390;  alias, 1 drivers
+v0x55df0edc7ac0_0 .net "gt", 0 0, L_0x55df0edc8110;  alias, 1 drivers
+v0x55df0edc7b80_0 .net "lt", 0 0, L_0x55df0edc82a0;  alias, 1 drivers
+L_0x55df0edc8110 .cmp/gt 2, v0x55df0edc7d30_0, v0x55df0edc7e10_0;
+L_0x55df0edc82a0 .cmp/gt 2, v0x55df0edc7e10_0, v0x55df0edc7d30_0;
+L_0x55df0edc8390 .cmp/eq 2, v0x55df0edc7d30_0, v0x55df0edc7e10_0;
+    .scope S_0x55df0edb2280;
+T_0 ;
+    %vpi_call 2 11 "$dumpfile", "comparator.vcd" {0 0 0};
+    %vpi_call 2 12 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x55df0edb2280 {0 0 0};
+    %vpi_call 2 14 "$monitor", "Time=%0t a=%b b=%b | a>b=%b a==b=%b a<b=%b", $time, v0x55df0edc7d30_0, v0x55df0edc7e10_0, v0x55df0edc7f50_0, v0x55df0edc7eb0_0, v0x55df0edc8020_0 {0 0 0};
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v0x55df0edc7d30_0, 0, 2;
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v0x55df0edc7e10_0, 0, 2;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 2;
+    %store/vec4 v0x55df0edc7d30_0, 0, 2;
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v0x55df0edc7e10_0, 0, 2;
+    %delay 10000, 0;
+    %pushi/vec4 2, 0, 2;
+    %store/vec4 v0x55df0edc7d30_0, 0, 2;
+    %pushi/vec4 1, 0, 2;
+    %store/vec4 v0x55df0edc7e10_0, 0, 2;
+    %delay 10000, 0;
+    %pushi/vec4 3, 0, 2;
+    %store/vec4 v0x55df0edc7d30_0, 0, 2;
+    %pushi/vec4 2, 0, 2;
+    %store/vec4 v0x55df0edc7e10_0, 0, 2;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 2;
+    %store/vec4 v0x55df0edc7d30_0, 0, 2;
+    %pushi/vec4 1, 0, 2;
+    %store/vec4 v0x55df0edc7e10_0, 0, 2;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v0x55df0edc7d30_0, 0, 2;
+    %pushi/vec4 3, 0, 2;
+    %store/vec4 v0x55df0edc7e10_0, 0, 2;
+    %delay 10000, 0;
+    %pushi/vec4 2, 0, 2;
+    %store/vec4 v0x55df0edc7d30_0, 0, 2;
+    %pushi/vec4 2, 0, 2;
+    %store/vec4 v0x55df0edc7e10_0, 0, 2;
+    %delay 10000, 0;
+    %delay 10000, 0;
+    %vpi_call 2 25 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "tb_compararator.v";
+    "comparator_2bit.v";
