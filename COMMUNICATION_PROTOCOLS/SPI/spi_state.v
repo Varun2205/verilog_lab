@@ -1,6 +1,6 @@
 module spi_state (
     input       clk, rst,
-    input       start,                // rising edge triggers a new transmission
+    input       start,                //  edge triggers a new transmission
     input [15:0] data_in,
     output      spi_cs, spi_sclk, spi_data,
     output      busy,                 // high during transmission
